@@ -15,8 +15,8 @@ nav ul a{
     font-weight: 500;
 }
 nav ul a:hover{
-    background-color: #2F4050!important;
-    color: #ffffff!important;
+    /*background-color: #2F4050!important;*/
+    /*color: #ffffff!important;*/
 }
 .userView .material-icons {
     color: #ffffff!important;
