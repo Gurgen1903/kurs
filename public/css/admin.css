@@ -1,0 +1,39 @@
+.box{
+    border: 2px solid;
+    width: 15%;
+    float: left;
+    padding: 10px 20px;
+    height: 100px;
+    margin: 0 10px;
+}
+.cont{
+    width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 25px;
+}
+.box p {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 0;
+}
+a.button-collapse.button_side_bar_open{
+    z-index: 9;
+    display: block;
+    background-color: #4C5D6D;
+    color: #ffffff!important;z-index: 9;
+    display: block;
+    background-color: #4C5D6D;
+    color: #ffffff!important;
+}
+.all_work_this_user span.work_object_this_user{
+    font-size: 18px;
+    display: inline-block;
+    padding-right: 10px;
+    font-weight: 500;
+    color: #D3858A;
+}
+.errorsForm input{
+    border-color: red!important;
+}
