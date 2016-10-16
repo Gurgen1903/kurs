@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\File;
 use Illuminate\Support\Facades\Auth;
 use App\all_works;
 use App\Taske;
+use Illuminate\Support\Facades\Session;
 
 
 class AdminController extends Controller
@@ -55,9 +56,10 @@ class AdminController extends Controller
                'filefield' => 'required',
                'work_category' => 'required',
             ]);
-        $fileType = $request->file('filefield')->getClientOriginalExtension();
-        $display_name = $request->input('work_name');
-        $filename = $request->input('work_name').'__'.uniqid().'.'.$fileType;
+        if($request->file('filefield')->getClientOriginalExtension() == 'pdf' || $request->file('filefield')->getClientOriginalExtension() == 'docx'){
+            $fileType = $request->file('filefield')->getClientOriginalExtension();
+            $display_name = $request->input('work_name');
+            $filename = $request->input('work_name').'__'.uniqid().'.'.$fileType;
             $filePath = base_path('uploads');
             $data = array(
                 'works_name' => $filename,
@@ -72,6 +74,12 @@ class AdminController extends Controller
             $adminServices->insertNewWork($data);
             $request->file('filefield')->move($filePath,$filename);
             return redirect('add-work');
+        }
+        else{
+            Session::flash('errorTypeFile', "Type of file must be \"docx\" or \"PDF\"");
+            return back();
+        }
+
 
     }
 

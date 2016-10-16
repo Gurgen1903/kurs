@@ -42,16 +42,22 @@
                     <div class="file-field left input-field col s10 ">
                         <input type="submit" class="waves-effect waves-light btn" value="ADD">
                     </div>
-
+                    @if(Session::has('errorTypeFile'))
+                        <script>Materialize.toast('{{Session::get('errorTypeFile')}}', 5000, 'rounded', 'position','left')</script>
+                    @endif
                 </div>
             </div>
         </form>
         <div class="col s4">
+            @if(isset($data))
             @foreach($data as $val)
                 <div class="all_work_this_user">
-                    <span class="work_object_this_user">{{$val->works_object}}</span>: <a href="http://localhost/kurs/uploads/{{$val->works_name}}">{{$val->display_name}}</a>
+                    <span class="work_object_this_user">{{$val->works_object}}</span>: <a
+                            href="http://localhost/kurs/uploads/{{$val->works_name}}">{{$val->display_name}}</a>
                 </div>
             @endforeach
+            @endif
         </div>
+
     </div>
 @endsection
