@@ -15,11 +15,17 @@ class CreateAllWorksTable extends Migration
         Schema::create('all_works', function (Blueprint $table) {
             $table->increments('id');
             $table->string('works_name');
+            $table->string('display_name');
             $table->string('works_object');
             $table->string('user_name');
             $table->integer('user_id');
+
             $table->timestamps();
         });
+        Schema::table('all_works', function (Blueprint $table) {
+            $table->string('work_category');
+        });
+
     }
 
     /**

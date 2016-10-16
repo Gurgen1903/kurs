@@ -78,6 +78,7 @@ $(document).on('submit','#login_controller', function (e) {
                                                     <li><a href="#!" id="logoutUser"><i class="large material-icons" > power_settings_new</i></a></li>\n\
                                             ';
                 $(document).find('.right.hide-on-med-and-down.header_menu_login').prepend(html_login_register);
+                location.reload();
                 $('#loginModal').closeModal();
 
 

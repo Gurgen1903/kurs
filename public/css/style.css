@@ -168,6 +168,7 @@ body {
     background-color: #ffffff;
 }
 .rightBar{
+    margin-left: 50px;
     background-color: #ffffff;
     height: 1005px;
     padding: 15px 0;
@@ -256,4 +257,19 @@ body {
     padding: 15px 5px;
     border-bottom: 1px solid #c0c0c0;
     text-align: left;
+}
+.login_form{
+    overflow: hidden;
+}
+.categories_list_data{
+    padding: 10px 20px!important;
+}
+.categories_list_data.work_profi p{
+    margin: 0;
+    font-size: 18px;
+    color: #4C5D6D;
+    font-weight: 500;
+}
+.dropBacColor{
+    background-color: #8A9BAB;
 }

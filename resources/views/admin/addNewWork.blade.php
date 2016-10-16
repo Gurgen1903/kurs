@@ -15,10 +15,21 @@
                         </select>
                         <label></label>
                     </div>
+                    <div class="input-field col s10 {{(count($errors) > 0)?'errorsForm':''}}">
+                        <select name="work_category">
+                            <option value="" disabled selected>Choose Category</option>
+                            <option value="diplom">Diplom</option>
+                            <option value="kursovoi">Kursovoi</option>
+                            <option value="esse">Esse</option>
+                            <option value="referat">Referat</option>
+                        </select>
+                        <label></label>
+                    </div>
                     <div class="input-field col s10 {{(count($errors) > 0)?'errorsForm':''}}" >
                         <input id="work_name" type="text" name="work_name" class="validate">
                         <label for="work_name">Work Name</label>
                     </div>
+
                     <div class="file-field input-field col s10 {{(count($errors) > 0)?'errorsForm':''}}">
                         <div class="btn">
                             <span>File</span>
@@ -38,7 +49,7 @@
         <div class="col s4">
             @foreach($data as $val)
                 <div class="all_work_this_user">
-                    <span class="work_object_this_user">{{$val->works_object}}</span>: <a href="http://localhost/kurs/uploads/{{$val->works_name}}">{{$val->works_name}}</a>
+                    <span class="work_object_this_user">{{$val->works_object}}</span>: <a href="http://localhost/kurs/uploads/{{$val->works_name}}">{{$val->display_name}}</a>
                 </div>
             @endforeach
         </div>

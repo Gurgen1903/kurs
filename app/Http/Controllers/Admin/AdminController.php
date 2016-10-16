@@ -53,13 +53,17 @@ class AdminController extends Controller
                'work_object' => 'required',
                'work_name' => 'required',
                'filefield' => 'required',
+               'work_category' => 'required',
             ]);
-            $filename = $request->input('work_name');
-            $fileType = $request->file('filefield')->getClientMimeType();
+        $fileType = $request->file('filefield')->getClientOriginalExtension();
+        $display_name = $request->input('work_name');
+        $filename = $request->input('work_name').'__'.uniqid().'.'.$fileType;
             $filePath = base_path('uploads');
             $data = array(
                 'works_name' => $filename,
+                'display_name' => $display_name,
                 'works_object' =>$request->input('work_object'),
+                'work_category' =>$request->input('work_category'),
                 'user_id' =>Auth::user()->id,
                 'user_name' =>Auth::user()->name,
 

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDiplomWorksTable extends Migration
+class CreateSubjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,10 @@ class CreateDiplomWorksTable extends Migration
      */
     public function up()
     {
-        Schema::create('diplom_works', function (Blueprint $table) {
+        Schema::create('subjects', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('diplom_name');
-            $table->string('diplom_description');
-            $table->text('diplom_fullText');
-            $table->integer('user_id');
-
+            $table->string('subject_name');
             $table->timestamps();
-
         });
     }
 
@@ -31,6 +26,6 @@ class CreateDiplomWorksTable extends Migration
      */
     public function down()
     {
-        Schema::drop('diplom_works');
+        Schema::drop('subjects');
     }
 }
