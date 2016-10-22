@@ -19,6 +19,16 @@ $(document).ready(function(){
     $(document).find('.drag-target').hide();
 
 
+//    date picker materialize css
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+    /**
+     * right block height = cont height
+     */
+    var cont_height = $(document).find('.cont').height();
+    $(document).find('.rightBar').css('height',cont_height)
 });
 
 
@@ -146,6 +156,43 @@ $(document).on('click','#logoutUser', function (e) {
                                       <li><a href="#!" class="register_modal_view">Register</a></li>';
                     $(document).find('.right.hide-on-med-and-down.header_menu_login').prepend   (html_logout);
             }
+        }
+    });
+});
+
+
+/**
+ * Order work ajax
+ * params from modal modal_order_work
+ * controller function :
+ *
+ */
+$(document).on('click','.order_work_modal_btn',function(){
+    var url = $(document).find('.order_work_modal_form').data('action');
+    var _token = $(document).find('input[name="_token"]').val()
+   var category = $(document).find('.body_modal_order_work').find('.order_work_categoryy option:selected').text();
+   var fakultet = $(document).find('.body_modal_order_work').find('.order_work_fakultet option:selected').text();
+   var name_of_work = $(document).find('.body_modal_order_work').find('input[name="name_modal_order_work"]').val();
+   var nauch_ruk = $(document).find('.body_modal_order_work').find('input[name="nauch_ruk_modal_order_work"]').val();
+   var data_sdachi = $(document).find('.body_modal_order_work').find('input[name="date_sdachi"]').val();
+   var nameOfStudent = $(document).find('.body_modal_order_work').find('input[name="nameOfStud_modal_order_work"]').val();
+   var tel_number = $(document).find('.body_modal_order_work').find('input[name="number_modal_order_work"]').val();
+
+    $.ajax({
+       url: url,
+       method: 'POST',
+        data:{
+            category:category,
+            fakultet:fakultet,
+            name_of_work:name_of_work,
+            nauch_ruk:nauch_ruk,
+            data_sdachi:data_sdachi,
+            nameOfStudent:nameOfStudent,
+            tel_number:tel_number,
+            _token:_token,
+        },
+        success: function(result) {
+            $('#modal_order_work').closeModal();
         }
     });
 });

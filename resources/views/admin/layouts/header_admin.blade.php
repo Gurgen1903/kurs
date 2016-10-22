@@ -40,6 +40,7 @@
     <li><a class="subheader">Subheader</a></li>
     <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
     <li><a class="waves-effect" href="{{url('add-work')}}">Add new Diplom work</a></li>
+    <li><a class="waves-effect" href="{{url('all-order-work')}}">Orders</a></li>
 </ul>
 
 

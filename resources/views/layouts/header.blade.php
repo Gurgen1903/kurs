@@ -17,11 +17,10 @@
 
         </ul>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="#!">Zakazat Diplomnuyu</a></li>
-            <li><a href="#!">Zakazat Kursovuyu</a></li>
-            <li><a href="#!">Zakazat Referat</a></li>
+            <li><a href="#modal_order_work" class="order_new_work waves-effect waves-light modal-trigger">Zakazat Rabotu</a></li>
         </ul>
     </div>
 </nav>
 @extends('auth.login')
 @extends('auth.register')
+@extends('modals.order_work')

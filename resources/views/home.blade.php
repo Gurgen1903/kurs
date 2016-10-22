@@ -8,10 +8,10 @@
                 </div>
                 <div class="col s7">
                     <h3>How to write Diplom work!!!</h3>
-                    <a class="waves-effect waves-orange btn-flat home_buttpn_top_1">dimplomnaya</a>
-                    <a class="waves-effect waves-teal btn-flat home_buttpn_top_2">kursovaya</a>
-                    <a class="waves-effect waves-teal btn-flat home_buttpn_top_3">referat</a>
-                    <a class="waves-effect waves-teal btn-flat home_buttpn_top_4">otchet o praktike</a>
+                    {{--<a class="waves-effect waves-orange btn-flat home_buttpn_top_1">dimplomnaya</a>--}}
+                    {{--<a class="waves-effect waves-teal btn-flat home_buttpn_top_2">kursovaya</a>--}}
+                    {{--<a class="waves-effect waves-teal btn-flat home_buttpn_top_3">referat</a>--}}
+                    {{--<a class="waves-effect waves-teal btn-flat home_buttpn_top_4">otchet o praktike</a>--}}
                     <div class="card-panel teal">
                         <span class="header_card_panel"><i class="material-icons">error_outline</i>Zapomnite Pravilo</span>
                     <span class="white-text">I am a very simple card. I am good at containing small bits of information.

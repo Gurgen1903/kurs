@@ -37,3 +37,11 @@ a.button-collapse.button_side_bar_open{
 .errorsForm input{
     border-color: red!important;
 }
+.allOrders .header_title{
+    text-align: center;
+    border-bottom: 2px solid #4C5D6D;
+    padding-bottom: 10px;
+}
+.orders_examples{
+    margin-top: 20px;
+}

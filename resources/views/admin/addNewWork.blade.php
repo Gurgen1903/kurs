@@ -12,6 +12,8 @@
                             <option value="ekonomika">Economika</option>
                             <option value="informatika">Informatika</option>
                             <option value="yuridicheskii">Yurisprudenciya</option>
+                            <option value="prikladnoi">Prikladnaya Matematika</option>
+                            <option value="turism">Turism</option>
                         </select>
                         <label></label>
                     </div>

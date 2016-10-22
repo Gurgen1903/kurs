@@ -7,8 +7,10 @@
                 </div>
                 <div class="col s12 center work_profi_categories">
                     <div class="width_margin_auto  ">
+                        <div class="row">
                         @foreach($works_category as $categ)
-                            <div class="work_profi_categories_bg">
+
+                            <div class="col s5 work_profi_categories_bg">
 
                                 <a href="diplom-works/worksByCategory/{{$categ->works_object}}" class="{{$categ->works_object}}">{{$categ->works_object}}</a>
                                 {{--@foreach($diploms_works as $work)--}}
@@ -20,7 +22,9 @@
                                 {{--@endforeach--}}
                             </div>
                         @endforeach
-                </div>
+                        </div>
+
+                    </div>
             </div>
         </div>
     @else

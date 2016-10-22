@@ -24,4 +24,29 @@ class AdminServices
         $result = DB::table('all_works')->where('user_id',$id)->get();
         return $result;
     }
+
+    /**
+     * create new order in table
+     */
+    public function insertDataOrder($data){
+        $result = DB::table('order_work')->insert($data);
+        return $result;
+    }
+    /**
+     * get all orders from order_work table
+     */
+    public function getAllOrders(){
+        $result = DB::table('order_work')->get();
+        return $result;
+    }
+    /**
+     * update field 'new_end' 0
+     */
+    public function updateNewEnd($id){
+        DB::table('order_work')->where('id',$id)->update(['new_end' => 0,'completed'=>'yes']);
+
+    }
+
+
+
 }

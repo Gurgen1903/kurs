@@ -1,0 +1,14 @@
+@media screen and (max-width: 950px) {
+    .rightBar{
+        display: none;
+    }
+    .container .row {
+        margin: 0 !important;
+    }
+    .cont{
+        width: 90% !important;
+        margin: 0 auto!important;
+        float: none!important;
+    }
+
+}

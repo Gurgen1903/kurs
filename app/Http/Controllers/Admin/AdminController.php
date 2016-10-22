@@ -79,9 +79,46 @@ class AdminController extends Controller
             Session::flash('errorTypeFile', "Type of file must be \"docx\" or \"PDF\"");
             return back();
         }
-
-
     }
+
+    /**
+     * order work function
+     * get all info from ajax request
+     * and insert this info
+     */
+    public function postOrderWorkByUser(Request $request,AdminServices $adminServices){
+        $data = array(
+            'category_order' => $request->input('category'),
+            'name' => $request->input('name_of_work'),
+            'fakultet' => $request->input('fakultet'),
+            'teacher' => $request->input('nauch_ruk'),
+            'completion_date' => $request->input('data_sdachi'),
+            'name_student' => $request->input('nameOfStudent'),
+            'new_end' => 1,
+            'tel_number' => $request->input('tel_number'),
+        );
+        $adminServices->insertDataOrder($data);
+
+        return 1;
+    }
+
+    /**
+     * View all orders
+     *
+     */
+    public function allOrders(AdminServices $adminServices){
+        $orders = $adminServices->getAllOrders();
+        return view('admin.orders_admin',compact('orders'));
+    }
+    /**
+     * update status new_end
+     */
+    public function changeStatusNew(AdminServices $adminServices,$id){
+        $adminServices->updateNewEnd($id);
+        return redirect('all-order-work');
+    }
+
+
 
 
 
