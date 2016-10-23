@@ -22,12 +22,12 @@
                         <p>my predlagem asdasdas asdxcksdfoasdfjoxzzxkcs asdkpaspdk paskpdas </p>
                         <p>my predlagem asdasdas asdxcksdfoasdfjoxzzxkcs asdkpaspdk paskpdas </p>
                     </div>
-                    <div class="home_page_top_socials_icons">
-                        <a href="#"><img src="{{url('imgs/fb_icon.png')}}" alt=""></a>
-                        <a href="#"><img src="{{url('imgs/fb_icon.png')}}" alt=""></a>
-                        <a href="#"><img src="{{url('imgs/fb_icon.png')}}" alt=""></a>
-                        <a href="#"><img src="{{url('imgs/fb_icon.png')}}" alt=""></a>
-                    </div>
+                    {{--<div class="home_page_top_socials_icons">--}}
+                        {{--<a href="#"><img src="{{url('imgs/fb_icon.png')}}" alt=""></a>--}}
+                        {{--<a href="#"><img src="{{url('imgs/fb_icon.png')}}" alt=""></a>--}}
+                        {{--<a href="#"><img src="{{url('imgs/fb_icon.png')}}" alt=""></a>--}}
+                        {{--<a href="#"><img src="{{url('imgs/fb_icon.png')}}" alt=""></a>--}}
+                    {{--</div>--}}
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="col s12 shag1_footer">
-                    <p>asdasd asdad a454as asd4asd54asd45 Привет 4a5sd45as45da54sda 45s4d5a45sd45a s45da 45sd a45sd45 asd </p>
+                    <p>asdasd asdad a454as asd4asd54asd45 пїЅпїЅпїЅпїЅпїЅпїЅ 4a5sd45as45da54sda 45s4d5a45sd45a s45da 45sd a45sd45 asd </p>
                 </div>
             </div>
         </div>

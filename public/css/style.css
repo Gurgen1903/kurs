@@ -124,6 +124,7 @@ body {
     margin-bottom: 55px;
 }
 .top_shag1 p {
+    text-align: center;
     margin: 0;
     font-size: 25px;
     font-weight: 500;
@@ -134,6 +135,8 @@ body {
     border-bottom:1px solid #878787;
 }
 .shag1{
+    text-align: center;
+
     padding: 15px 30px;
 }
 .shag1 ul {
@@ -146,6 +149,7 @@ body {
     background: url("../imgs/galka.png") 0 50% no-repeat;
     margin-bottom: 10px;
 }
+.
 .shag1Ul{
     padding-left: 45px!important;
 }
@@ -176,11 +180,19 @@ body {
     background-color: #ffffff;
 }
 .rightBar{
-    margin-left: 50px;
+    margin-left: 30px;
     background-color: #ffffff;
-    height: 1005px;
     padding: 15px 0;
     margin-top: 25px;
+}
+.backToDiplom{
+    margin: 0px 0 20px 3px;
+}
+.backToDiplom a{
+    padding: 5px 15px;
+    background-color: #4C5D6D;
+    color: #ffffff;
+    border-radius: 4px;
 }
 .container{
     width: 100% !important;
@@ -241,16 +253,20 @@ body {
     background-color: #ffffff;
     margin-left: 20px!important;
     width: 48%;
+    text-align: left;
     padding: 20px;
-    float: left;
+    border-bottom: 1px solid #F2E6F6;
     margin-bottom: 25px;
 }
 .work_profi_categories_bg a {
     font-size: 25px;
-    color: #c0c0c0;
-    text-decoration: underline;
+    color: #4C5D6D;
+}
+.work_profi h3 {
+    color: #4C5D6D;
 }
 .width_margin_auto  {
+    padding-top: 20px;
     width: 80%;
     margin: 0 auto;
     overflow: hidden
@@ -285,14 +301,14 @@ body {
     background-color: #4C5D6D;
 }
 .header_modal_order_work{
-    /*border-bottom: 1px solid;*/
+    padding: 16px 0 5px 0;
 }
 .order_work_modal_form{
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
 }
 #modal_order_work.modal {
-    max-height: 90% !important;
+    max-height: 80% !important;
 }
 #modal_order_work.modal .modal-footer .btn{
     background-color: #4C5D6D;
@@ -308,8 +324,41 @@ body {
 }
 #modal_order_work.modal .modal-footer{
     border-top: 2px solid #4C5D6D;
+    padding: 15px 0 0 5px;
 }
 #modal_order_work.modal .modal-header{
     border-bottom: 2px solid #4C5D6D;
     padding:10px 0;
+}
+#slide-out i {
+    color: #ffffff;
+}
+#slide-out a:hover{
+    color: #DBB4DA;
+}
+#slide-out a:hover > i {
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+    color: #DBB4DA;
+}
+#slide-out.side-nav .collapsible-body li a {
+    padding: 0!important;
+}
+#slide-out.side-nav li{
+    padding: 10px 0!important;
+    text-align: center;
+}
+.work_profi_categories{
+    background-color: #ffffff;
+}
+.count_subject{
+    float: right;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 0px 15px;
+    background-color: #4C5D76;
+    border-radius: 6px;
+    margin-top: 5px;
 }

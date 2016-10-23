@@ -36,7 +36,7 @@ class AdminServices
      * get all orders from order_work table
      */
     public function getAllOrders(){
-        $result = DB::table('order_work')->get();
+        $result = DB::table('order_work')->orderBy('created_at','asc')->get();
         return $result;
     }
     /**

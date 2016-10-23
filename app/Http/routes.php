@@ -15,7 +15,7 @@ Route::post('auth/register', 'Auth\AuthController@postStore');
 
 
 // Works routes
-Route::get('diplom-works', 'WorksController@diplomWorks');
+Route::get('diplom-works/{id}', 'WorksController@diplomWorks');
 Route::get('diplom-works/worksByCategory/{category}', 'WorksController@worksByCategory');
 
 
