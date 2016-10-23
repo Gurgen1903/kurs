@@ -29,6 +29,13 @@ $(document).ready(function(){
      */
     var cont_height = $(document).find('.cont').height();
     $(document).find('.rightBar').css('height',cont_height)
+
+    /**
+     * open modal order work by side bar link
+     */
+    $(document).on('click','.order_work', function () {
+        $(document).find('#modal_order_work').openModal();
+    })
 });
 
 

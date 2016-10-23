@@ -3,7 +3,7 @@
 <div class="cont" style="width: 75%;float:left;">
     @yield('content')
 </div>
-<div class="rightBar" style="width: 20%;float:left;">
+<div class="rightBar" style="width: 18%;float:left;">
     @include('layouts.leftbar')
 </div>
 {{--CALL BACK--}}

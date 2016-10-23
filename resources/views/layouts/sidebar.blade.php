@@ -29,7 +29,7 @@
         <a href="{{url('/')}}" class="order_work waves-effect">  <i class=" material-icons">work</i>Home</a>
     </li>
     <li class="userView">
-            <a href="#!email" class="order_work waves-effect">  <i class=" material-icons">work</i>Zakazat Rabotu</a>
+            <a href="#modal_order_work" class="order_work waves-effect">  <i class=" material-icons">work</i>Zakazat Rabotu</a>
     </li>
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
