@@ -5,6 +5,9 @@
     <div class="row">
         <div class="col s12">
             <div class="col s12">
+                <div class="backToDiplom">
+                    <a href="{{url()->previous()}}">Назад</a>
+                </div>
                 @foreach($data as $val)
 
                     <div class="col s12 categories_list_data work_profi">

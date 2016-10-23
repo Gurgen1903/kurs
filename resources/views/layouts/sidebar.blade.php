@@ -10,6 +10,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- STYLE -->
     <link href="{{url('/css/style.css')}}" rel="stylesheet">
     <link href="{{url('/css/media.css')}}" rel="stylesheet">
@@ -26,20 +27,21 @@
 
 <ul id="slide-out" class="side-nav">
     <li class="userView">
-        <a href="{{url('/')}}" class="order_work waves-effect">  <i class=" material-icons">work</i>Home</a>
+        <a href="{{url('/')}}" class="order_work waves-effect">  <i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a>
     </li>
     <li class="userView">
-            <a href="#!email" class="order_work waves-effect">  <i class=" material-icons">work</i>Zakazat Rabotu</a>
+            <a href="#!email" class="order_work waves-effect"><i class="fa fa-briefcase fa-lg" aria-hidden="true"></i>  Закажите Работу</a>
     </li>
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
-            <li class="userView" style="padding: 0!important;">
-                <a class="collapsible-header order_work waves-effect">Works<i class="material-icons">arrow_drop_down</i></a>
+            <li class="userView" style="padding: 0!important; border-bottom: none">
+                <a class="collapsible-header order_work waves-effect">Работы<i class="material-icons">arrow_drop_down</i></a>
                 <div class="collapsible-body">
                     <ul class="dropBacColor">
-                        <li class="userView"><a href="{{url('diplom-works')}}" class="order_work waves-effect"><i class="material-icons">assignment</i>Diploms</a></li>
-                        <li class="userView"><a href="#!" class="order_work waves-effect"><i class="material-icons">assignment</i>Kursovoi</a></li>
-                        <li class="userView"><a href="#!" class="order_work waves-effect"><i class="material-icons">assignment</i>ESSE</a></li>
+                        <li class="userView"><a href="{{url('diplom-works/diplom')}}" class="order_work waves-effect">Дипломная</a></li>
+                        <li class="userView"><a href="{{url('diplom-works/kursovoi')}}" class="order_work waves-effect">Курсовая</a></li>
+                        <li class="userView"><a href="{{url('diplom-works/referat')}}" class="order_work waves-effect">Реферат</a></li>
+                        <li class="userView"><a href="{{url('diplom-works/esse')}}" class="order_work waves-effect">ESSE</a></li>
                     </ul>
                 </div>
             </li>

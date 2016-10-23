@@ -10,16 +10,10 @@
                         <div class="row">
                         @foreach($works_category as $categ)
 
-                            <div class="col s5 work_profi_categories_bg">
+                            <div class="col s11 work_profi_categories_bg">
 
-                                <a href="diplom-works/worksByCategory/{{$categ->works_object}}" class="{{$categ->works_object}}">{{$categ->works_object}}</a>
-                                {{--@foreach($diploms_works as $work)--}}
-                                    {{--@if($work->works_object ==  $categ->works_object)--}}
-                                        {{--<div class="worker">--}}
-                                            {{--<p>{{$work->works_name}}</p>--}}
-                                        {{--</div>--}}
-                                    {{--@endif--}}
-                                {{--@endforeach--}}
+                                <a href="{{url('diplom-works/worksByCategory/')}}/{{$categ->works_object}}" class="{{$categ->works_object}}">{{$categ->works_object}}</a>
+                                <span class="count_subject">{{$categ->count}}</span>
                             </div>
                         @endforeach
                         </div>

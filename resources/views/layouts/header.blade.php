@@ -17,7 +17,7 @@
 
         </ul>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="#modal_order_work" class="order_new_work waves-effect waves-light modal-trigger">Zakazat Rabotu</a></li>
+            <li><a href="#modal_order_work" class="order_new_work waves-effect waves-light modal-trigger">Заказать работу</a></li>
         </ul>
     </div>
 </nav>

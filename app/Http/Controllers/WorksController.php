@@ -20,9 +20,15 @@ class WorksController extends Controller
      * @param WorksServices $worksServices
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function diplomWorks(WorksServices $worksServices){
-        $diploms_works = $worksServices->getAllDiplomsWorks();
+    public function diplomWorks(WorksServices $worksServices,$category){
+        $diploms_works = $worksServices->getAllDiplomsWorks($category);
         $works_category = $worksServices->selectAllCategoriesWorks();
+        $data = array();
+        foreach ($works_category as $val){
+            $data[$val->works_object] = $worksServices->getCountWork($val->works_object);
+                    $val->count = $data[$val->works_object];
+        }
+
        return view('works.diplom_works',compact('diploms_works','works_category'));
     }
 

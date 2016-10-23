@@ -27,8 +27,8 @@ $(document).ready(function(){
     /**
      * right block height = cont height
      */
-    var cont_height = $(document).find('.cont').height();
-    $(document).find('.rightBar').css('height',cont_height)
+    // var cont_height = $(document).find('.cont').height();
+    // $(document).find('.rightBar').css('height',cont_height)
 });
 
 
