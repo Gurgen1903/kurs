@@ -8,11 +8,10 @@ use Illuminate\Http\Request;
 
 class WorksController extends Controller
 {
-    public function __construct()
+    protected $worksServices;
+    public function __construct(WorksServices $worksServices)
     {
-//        if(Auth::check()){
-//
-//        }
+        $this->worksServices = $worksServices;
     }
 
     /**
@@ -20,16 +19,19 @@ class WorksController extends Controller
      * @param WorksServices $worksServices
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function diplomWorks(WorksServices $worksServices,$category){
-        $diploms_works = $worksServices->getAllDiplomsWorks($category);
-        $works_category = $worksServices->selectAllCategoriesWorks();
+    public function diplomWorks($category){
+        $works_category = $this->worksServices->selectAllCategoriesWorks($category);
+
+//        $diploms_works = $worksServices->getAllDiplomsWorks($category);
+//        $works_category = $this->worksServices->selectAllCategoriesWorks();
         $data = array();
         foreach ($works_category as $val){
-            $data[$val->works_object] = $worksServices->getCountWork($val->works_object);
+            $data[$val->works_object] =$this->worksServices->getCountWork($val->works_object,$category);
                     $val->count = $data[$val->works_object];
         }
 
-       return view('works.diplom_works',compact('diploms_works','works_category'));
+
+        return view('works.diplom_works',compact('works_category'));
     }
 
     public function worksByCategory(WorksServices $worksServices, $subject){

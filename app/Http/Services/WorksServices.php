@@ -17,20 +17,17 @@ class WorksServices
     /**
      * select all works_category from all_works table
      */
-    public function selectAllCategoriesWorks()
+    public function selectAllCategoriesWorks($category)
     {
-        $sql = 'SELECT w.works_object
-                FROM all_works as w
-                WHERE w.work_category = "diplom"
-                GROUP BY w.works_object';
-        return DB::select(DB::raw($sql));
+        return DB::table('all_works')->where('work_category',$category)->groupBy('works_object')->get();
+
     }
     /**
      * select all works COUNT by category
      * table all_works
      */
-    public function getCountWork($subject){
-        return DB::table('all_works')->where('works_object',$subject)->count();
+    public function getCountWork($subject,$category){
+        return DB::table('all_works')->where([['works_object','=',$subject],['work_category','=',$category]])->count();
     }
 
     /**

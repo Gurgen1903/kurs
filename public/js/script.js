@@ -35,7 +35,7 @@ $(document).ready(function(){
     /**
      * open modal order work by side bar link
      */
-    $(document).on('click','.order_work', function () {
+    $(document).on('click','.modalOrderOpen', function () {
         $(document).find('#modal_order_work').openModal();
     })
 });

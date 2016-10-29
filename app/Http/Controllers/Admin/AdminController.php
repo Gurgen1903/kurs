@@ -56,10 +56,10 @@ class AdminController extends Controller
                'filefield' => 'required',
                'work_category' => 'required',
             ]);
-        if($request->file('filefield')->getClientOriginalExtension() == 'pdf' || $request->file('filefield')->getClientOriginalExtension() == 'docx'){
+        if($request->file('filefield')->getClientOriginalExtension() == 'pdf' || $request->file('filefield')->getClientOriginalExtension() == 'docx' || $request->file('filefield')->getClientOriginalExtension() == 'rtf'){
             $fileType = $request->file('filefield')->getClientOriginalExtension();
             $display_name = $request->input('work_name');
-            $filename = $request->input('work_name').'__'.uniqid().'.'.$fileType;
+            $filename = '__'.uniqid().'.'.$fileType;
             $filePath = base_path('uploads');
             $data = array(
                 'works_name' => $filename,

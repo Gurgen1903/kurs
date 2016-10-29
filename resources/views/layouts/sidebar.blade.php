@@ -1,7 +1,9 @@
-<!doctype html>
-<html lang="ru">
+п»ї<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+
+
     <title>Document</title>
 
 
@@ -30,17 +32,17 @@
         <a href="{{url('/')}}" class="order_work waves-effect">  <i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a>
     </li>
     <li class="userView">
-            <a href="#modal_order_work" class="order_work waves-effect">  <i class=" material-icons">work</i>Zakazat Rabotu</a>
+            <a href="#modal_order_work" class="order_work modalOrderOpen waves-effect">  <i class=" material-icons">work</i>Zakazat Rabotu</a>
     </li>
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li class="userView" style="padding: 0!important; border-bottom: none">
-                <a class="collapsible-header order_work waves-effect">Работы<i class="material-icons">arrow_drop_down</i></a>
+                <a class="collapsible-header order_work waves-effect">Р Р°Р±РѕС‚С‹<i class="material-icons">arrow_drop_down</i></a>
                 <div class="collapsible-body">
                     <ul class="dropBacColor">
-                        <li class="userView"><a href="{{url('diplom-works/diplom')}}" class="order_work waves-effect">Дипломная</a></li>
-                        <li class="userView"><a href="{{url('diplom-works/kursovoi')}}" class="order_work waves-effect">Курсовая</a></li>
-                        <li class="userView"><a href="{{url('diplom-works/referat')}}" class="order_work waves-effect">Реферат</a></li>
+                        <li class="userView"><a href="{{url('diplom-works/diplom')}}" class="order_work waves-effect">Р”РёРїР»РѕРјРЅР°СЏ</a></li>
+                        <li class="userView"><a href="{{url('diplom-works/kursovoi')}}" class="order_work waves-effect">РљСѓСЂСЃРѕРІР°СЏ</a></li>
+                        <li class="userView"><a href="{{url('diplom-works/referat')}}" class="order_work waves-effect">Р РµС„РµСЂР°С‚</a></li>
                         <li class="userView"><a href="{{url('diplom-works/esse')}}" class="order_work waves-effect">ESSE</a></li>
                     </ul>
                 </div>
